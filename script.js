@@ -2,7 +2,7 @@ $(document).ready(function() {
     // this shows the current time and the current date
     $("currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
     // Now to set up an event listener for user's input 
-    $(".saveBtn").on ("click", function () {
+    $(".saveBtn").on("click", function () {
     var text = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
@@ -10,7 +10,7 @@ $(document).ready(function() {
     localStorage.setItem(time, text);
 })
 
-    // 
+    // retrieve any saved data from localStorage
     $("#hour9.description").val(localStorage.getItem(hour9));
     $("#hour10.description").val(localStorage.getItem(hour10));
     $("#hour11.description").val(localStorage.getItem(hour11));
@@ -20,4 +20,14 @@ $(document).ready(function() {
     $("#hour3.description").val(localStorage.getItem(hour3));
     $("#hour4.description").val(localStorage.getItem(hour4));
     $("#hour5.description").val(localStorage.getItem(hour5));
+
+    //use moment.js  in a function to get the number of hours that is current for the specified time
+
+    function hourTracker() {
+        var currentHour = moment().hour();
+    }
+    // A loop through the time blocks
+    $(".time-block").each(function ()) {
+        var blockhour = parseInt($(this).attr("id").split("hour")[1]);
+    }
 }
