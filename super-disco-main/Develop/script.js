@@ -12,9 +12,7 @@ var hour3 = $('#hour3').text();
 var hour4 = $('#hour4').text();
 var hour5 = $('#hour5').text();
 
-// capture event data for and into the local storage
-$('#')
-
+// capture event data for and into the local storage upon clicking save
 
 // TIME //
 
